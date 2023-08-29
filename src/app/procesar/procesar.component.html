@@ -1,0 +1,27 @@
+<div>
+<header>
+    <h1>Análisis Financiero IA</h1>
+  </header>
+  <!-- <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Acerca de nosotros</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav> -->
+
+<div class="container"><form (submit)="procesarArchivo()">
+    <input type="text" [(ngModel)]="archivo" name="archivo" placeholder="codigo del archivo">
+    <button type="submit">Procesar Archivo</button>
+  </form>
+
+  <div class="respuesta">
+    <p class="Rtitulo">Análisis financiero del documento procesado: </p>
+    <div *ngIf="loading" class="loading-spinner"></div>
+    <div class="Rcontenido" *ngIf="!loading">{{ respuesta }}</div>
+    
+  </div>
+
+  </div>
+</div>
